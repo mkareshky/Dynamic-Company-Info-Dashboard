@@ -12,7 +12,6 @@ export const ChartsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
 
   svg {
     margin: 0 auto;
@@ -22,6 +21,7 @@ export const ChartsContainer = styled.div`
   @media (max-width: 768px) {
     padding: 10px;
     max-width: 100%;
+    margin: 20px;
   }
 `;
 
@@ -34,15 +34,12 @@ export const LegendContainer = styled.div`
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
 
-  h3 {
-    margin: 0 0 10px 0;
-    font-size: 14px;
-  }
-
-  p {
-    margin: 5px 0;
-    font-size: 12px;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
   @media (max-width: 768px) {

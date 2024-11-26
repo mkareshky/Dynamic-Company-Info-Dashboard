@@ -1,14 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { ChartsContainer, LegendContainer } from "./ChartsSection.styled";
+import revenueGuide from "../../assets/revenue-guide.svg"; // Import the guide SVG
 
 const ChartsSection: React.FC = () => {
   const revenueData = useSelector((state: any) => state.stats.revenueDistribution);
 
-  // Define meaningful names for segments
   const segmentLabels = ["Product Sales", "Subscriptions", "Services", "Others"];
 
-  // Function to calculate cumulative angles and slices
   const calculatePieSlices = (data: number[], radius: number) => {
     const total = data.reduce((sum, value) => sum + value, 0);
     let cumulativeAngle = 0;
@@ -50,13 +49,9 @@ const ChartsSection: React.FC = () => {
           />
         ))}
       </svg>
+      {/* Place the SVG-based guide in the top-right corner */}
       <LegendContainer>
-        <h3>Revenue Breakdown</h3>
-        {slices.map((slice, index) => (
-          <p key={index} style={{ color: slice.color }}>
-            {slice.label}
-          </p>
-        ))}
+        <img src={revenueGuide} alt="Revenue Breakdown Guide" />
       </LegendContainer>
     </ChartsContainer>
   );
