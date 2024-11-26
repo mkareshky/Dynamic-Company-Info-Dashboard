@@ -1,7 +1,7 @@
 
 ### **Live Demo**
 Visit the live website here:  
-[Dynamic Company Info Dashboard](https://dynamic-company-info-dashboard-jrlor7mt9.vercel.app/)
+[Dynamic Company Info Dashboard](https://dynamic-company-info-dashboard.vercel.app/)
 
 ---
 ### **Explanation of All Technologies Used in the App**
