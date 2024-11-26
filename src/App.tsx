@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import GlobalStyles from "./styles/GlobalStyles";
+import store from "./redux/store";
+import Header from "./components/Header/Header";
+import CompanyInfo from "./components/CompanyInfo/CompanyInfo";
+import ChartsSection from "./components/ChartsSection/ChartsSection";
+import DiagramsSection from "./components/DiagramsSection/DiagramsSection";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <GlobalStyles />
+      <Header />
+      <CompanyInfo />
+      <ChartsSection />
+      <DiagramsSection />
+      <Footer />
+    </Provider>
   );
-}
+};
 
 export default App;
